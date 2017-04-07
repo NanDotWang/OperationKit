@@ -3,4 +3,4 @@ osx_image: xcode8.3
 xcode_project: OperationKit.xcodeproj
 xcode_scheme: OperationKit-iOS
 xcode_sdk: iphonesimulator10.3
-script: xcodebuild -project OperationiKit.xcodeproj -scheme OperationKit-iOS
+script: xcodebuild -project OperationKit.xcodeproj -scheme OperationKit-iOS
