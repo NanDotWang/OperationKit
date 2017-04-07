@@ -1,6 +1,16 @@
 language: objective-c
 osx_image: xcode8.3
-xcode_project: OperationKit.xcodeproj
-xcode_scheme: OperationKit-iOS
 xcode_sdk: iphonesimulator10.3
-script: xcodebuild -project OperationKit.xcodeproj -scheme OperationKit-iOS
+
+env:
+  matrix:
+    - TEST_TYPE=iOS
+-before_install:
+ - |
+    gem install xcpretty -N --no-ri --no-rdoc
+script:
+- |
+    if [ "$TEST_TYPE" = iOS ]; then
+      set -o pipefail
+      xcodebuild -project OperationKit.xcodeproj -scheme OperationKit-iOS | xcpretty
+    fi
