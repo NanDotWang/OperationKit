@@ -1,5 +1,6 @@
 language: objective-c
-osx_image: xcode8.2
+osx_image: xcode8.3
 xcode_project: OperationKit.xcodeproj
 xcode_scheme: OperationKit-iOS
-xcode_sdk: iphonesimulator10.0
+xcode_sdk: iphonesimulator10.3
+script: xcodebuild -project OperationiKit.xcodeproj -scheme OperationKit-iOS
